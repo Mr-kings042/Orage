@@ -1,0 +1,435 @@
+/* General Styles */
+html,*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+overflow-x: hidden;
+background-color: white;
+  }
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+    
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    color: #333;
+    position: relative;
+    border: 2px solid #f8f9ff
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+  }
+ 
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+  }
+
+.navbar-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  border-radius: 5px;
+  background: #222; 
+  transition: width 0.5s ease-in-out;
+}
+
+.navbar-menu li a:hover::after {
+  width: 100%; 
+}
+
+
+.navbar-menu li a:hover {
+  color: #000000; 
+}
+
+
+  /* Hide Mobile Menu Icon on Large Screens */
+  .navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333
+  }
+
+.close-menu{
+  display: none;
+}
+
+ /* main section */
+  /* Header Section */
+
+  .header {
+    /* background-color: #252424; */
+    background-image: url('https://img.freepik.com/premium-psd/business-stationery-mock-up-design_1307-29.jpg?w=740');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 160px 20px;
+    text-align: center;
+  }
+  .header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    padding-top: -100px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+  .cta-button {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px 20px;
+    margin-top: -50px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e59400;
+    transform: scale(1.05);
+  }
+  /* Services Section */
+  .services {
+    margin-top: -120px;
+    padding: 60px 20px;
+    /* background-color: white; */
+    background-image: url('https://img.freepik.com/free-vector/blue-white-gradient-abstract-background_53876-60241.jpg?t=st=1740423791~exp=1740427391~hmac=41b899ab9d1a16f26ab812929b7d671103157d087150c4fa429d2f0d478fcf78&w=740');
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service-item {
+    background-color: white;
+    background-image: url('https://img.freepik.com/premium-vector/white-abstract-background_23-2148817571.jpg?w=1060');
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  /* .list-4{
+    background-image: url('https://img.freepik.com/premium-vector/computer-programing-coding-web-development-with-isometric-laptop-displaying-futuristic-ui_375605-384.jpg?w=1380');
+    
+    background-size: cover;
+    background-position: center;
+
+  } */
+  .service-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-item h3 {
+    font-size: 1.5rem;
+    padding-top: 30px;
+    color: #0f0f0f;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+  
+  .service-item p {
+    font-size: 1.5rem;
+    padding-top: 40px;
+    color: #141313;
+    font-weight: 900;
+  }
+  
+  /* How We Serve Section */
+  .how-we-serve {
+    background-image: url('https://img.freepik.com/free-photo/top-view-black-frame-with-plant_23-2148643780.jpg?t=st=1740424009~exp=1740427609~hmac=f88a562b873a7e5f2ade27cdfb4a3542156cbae35ded6d07d1c5ba4853143ab1&w=740');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    /* background-color: white; */
+    text-align: center;
+  }
+  
+  .how-we-serve h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .serve-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .serve-item {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .serve-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .serve-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #8d8484;
+  }
+  
+  .serve-item p {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 900;
+  }
+  
+  /* Why Choose Us Section */
+  .why-choose-us {
+    padding: 60px 20px;
+    background-color: #F9F9F9;
+    text-align: center;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .why-choose-us p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Feedback Section */
+  .feedback {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .feedback h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .feedback-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feedback-item {
+    background-color: #F9F9F9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feedback-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feedback-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .client-name {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 60px 20px;
+    background-color: #F9F9F9;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+    color: #007BFF;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #FFA500;
+    transform: scale(1.2);
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #282C34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body{
+        font: 10px;
+    }
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Hide menu off-screen */
+      width: 250px;
+      height: 100vh;
+      background: #f1f1f1;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+      transition: right 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    .navbar-menu.active {
+      right: 0; /* Slide in when active */
+    }
+  
+    .navbar-menu li {
+      margin: 15px 0;
+    }
+  
+    .close-menu {
+      display: none;
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #222;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+    .header {
+      /* background-color: #252424; */
+      background-image: url('https://img.freepik.com/premium-psd/business-stationery-mock-up-design_1307-29.jpg?w=740');
+      background-size: cover;
+      margin-top: -120px;
+      background-position: center;
+      color: white;
+      padding: 160px 20px;
+      text-align: center;
+    }
+   
+    .service-list, .serve-list, .feedback-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-item, .serve-item, .feedback-item {
+      width: 100%;
+    }
+  }
