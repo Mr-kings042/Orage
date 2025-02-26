@@ -1,9 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    // window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth",
-    //   });
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     const mobileMenu = document.getElementById("mobile-menu");
     const navMenu = document.getElementById("nav-menu");
     const closeMenu = document.getElementById("close-menu");
