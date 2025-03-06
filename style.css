@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* General Styles */
 html,*{
   margin: 0;
@@ -6,15 +7,12 @@ html,*{
 
 }
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-overflow-x: hidden;
-background-color: white;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+   overflow-x: hidden;
+   background-color: #ffffff;
   }
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-  }
+
   
   a {
     text-decoration: none;
@@ -43,8 +41,13 @@ background-color: white;
     font-weight: bold;
     color: #222;
     text-decoration: none;
+    display: inline-flex;
+    
   }
- 
+  .navbar-logo img {
+    width: 40px;
+    height: 40px; 
+  }
   
   .navbar-menu {
     list-style: none;
@@ -98,33 +101,43 @@ background-color: white;
   /* Header Section */
 
   .header {
-    /* background-color: #252424; */
-    background-image: url('https://img.freepik.com/premium-psd/business-stationery-mock-up-design_1307-29.jpg?w=740');
+    background-image: url('/images/Header_bg.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
-    padding: 160px 20px;
+    color: #ffff;
+    padding: 180px 20px;
+    padding-bottom: 100px;
     text-align: center;
+  }
+
+  .header-content{
+    padding: 40px;
   }
   .header-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    padding-top: -100px;
+    padding-top: -200px;
+    z-index: 1;
+    font-weight: 900; 
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     animation: fadeIn 2s ease-in-out;
   }
   
   .header-content p {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    font-weight: 700; 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     animation: fadeIn 2.5s ease-in-out;
   }
   .cta-button {
     background-color: #FFA500;
+    display: inline-block;
     color: white;
     padding: 10px 20px;
-    margin-top: -50px;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
@@ -132,13 +145,117 @@ background-color: white;
     background-color: #e59400;
     transform: scale(1.05);
   }
+  
+/* About Us Section */
+/* .about-us {
+  padding: 80px 20px;
+  text-align: center; */
+  /* background-image: url('https://img.freepik.com/free-vector/blue-white-gradient-abstract-background_53876-60241.jpg?t=st=1740423791~exp=1740427391~hmac=41b899ab9d1a16f26ab812929b7d671103157d087150c4fa429d2f0d478fcf78&w=740');
+  background-size: cover;
+  background-position: center; */
+/* }
+
+.about-content {
+  margin-top: -50px ;
+  background: transparent;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+ text-align: left;
+  color: #555; 
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  white-space: wrap;
+  color: #111111; 
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+} */
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
+  padding: 70px 10%;
+background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient background */
+  color:  #1e3c72; /* White text for contrast */
+  /* padding-bottom: 70px; */
+}
+
+/* Content Wrapper */
+.about-content {
+  max-width: 800px;
+  /* text-align: center; */
+  opacity: 0; 
+  transform: translateY(50px);
+  animation: slideUp 1.7s ease-out forwards;
+}
+
+/* Headings */
+.about-content h1 {
+  font-size: 2.5rem;
+  margin: 60px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  text-align: left;
+  /* color: #ffd700; Golden yellow for emphasis */
+  color: #1565c0; /* Deep blue for emphasis */
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.about-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* FontAwesome Icon */
+.about-content h1 i {
+  font-size: 1.5rem;
+  color: #1565c0;
+}
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px); /* Starts lower */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
   /* Services Section */
-  .services {
-    margin-top: -120px;
+  /* .services {
+    margin-top: -90px;
     padding: 60px 20px;
- 
     background-image: url('https://img.freepik.com/free-vector/blue-white-gradient-abstract-background_53876-60241.jpg?t=st=1740423791~exp=1740427391~hmac=41b899ab9d1a16f26ab812929b7d671103157d087150c4fa429d2f0d478fcf78&w=740');
     background-size: cover;
+    color: #f0f0;
     background-position: center;
     text-align: center; 
   }
@@ -146,6 +263,7 @@ background-color: white;
   .services h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
+    color: #000;
     animation: slideIn 1s ease-in-out;
   }
   
@@ -157,104 +275,244 @@ background-color: white;
   }
   
   .service-item {
-    background-color: white;
-    background-image: url('https://img.freepik.com/premium-vector/white-abstract-background_23-2148817571.jpg?w=1060');
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    max-height: 80%;
     text-align: center;
+    color: #000;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148810354.jpg?t=st=1741108322~exp=1741111922~hmac=8f80b94934e5bc37771fe5ca362659b60bf0aae7b9859eadbe04486decbcaaa7&w=740') ;
     transition: transform 0.3s ease;
   }
 
   .service-item:hover {
     transform: translateY(-10px);
+    border: 1.2px solid #444;
   }
   
   .service-item h3 {
-    font-size: 1.5rem;
-    padding-top: 30px;
-    color: #0f0f0f;
+    font-size: 1.7rem;
+    padding-top: 10px;
     font-weight: 900;
     margin-bottom: 15px;
   }
   
   .service-item p {
     font-size: 1.5rem;
-    padding-top: 40px;
-    color: #141313;
-    /* font-weight: 900; */
-  }
+    padding: 10px;
+    padding-bottom: 20px;
+   
+  } */
   
-  /* How We Serve Section */
-  .how-we-serve {
-    background-image: url('https://img.freepik.com/free-photo/top-view-black-frame-with-plant_23-2148643780.jpg?t=st=1740424009~exp=1740427609~hmac=f88a562b873a7e5f2ade27cdfb4a3542156cbae35ded6d07d1c5ba4853143ab1&w=740');
-    background-size: cover;
-    background-position: center;
-    padding: 60px 20px;
-    /* background-color: white; */
-    text-align: center;
+/* Services Section */
+.services {
+  padding: 0;
+  /* text-align: center; */
+}
+.services h2{
+  text-align: center;
+}
+.service-list {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 20px; */
+}
+
+/* Service Item Base Styles */
+.service-item {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /*Center content vertically */
+  align-items: center; /*Center content horizontally */
+  /* text-align: center; */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s forwards ease-out;
+}
+
+/* Unique Background Colors */
+.list-1 { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+.list-2 { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+.list-3 { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+.list-4 { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+.list-5 { background: linear-gradient(135deg, #fddb92, #d1fdff); }
+
+/* Text Styling */
+.service-item h3 {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.service-item p {
+  font-size: 1.2rem;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Hover Effects */
+/* .service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* Sticky Effect */
+.service-item.sticky {
+  top: 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  .how-we-serve h2 {
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 40px;
-    animation: slideIn 1s ease-in-out;
-  }
-  
-  .serve-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .serve-item {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .serve-item:hover {
-    transform: translateY(-10px);
-  }
-  
-  .serve-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #8d8484;
-  }
-  
-  .serve-item p {
-    font-size: 1.4rem;
-    color: #ffffff;
-  }
-  
+}
+
+/* How We Serve Section */
+.how-we-serve {
+  background-color: #ffffffd5;
+  padding: 60px 20px;
+  text-align: center; 
+}
+
+
+
+.how-we-serve h2 {
+  font-size: 2.5rem;
+  color: #0f0f00;
+  margin: 60px 0 90px 0;
+  animation: slideIn 1s ease-in-out;
+}
+
+.serve-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.serve-item {
+  padding: 20px;
+  background-color: transparent; 
+  color: #0f0f00; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  width: 300px;
+  /* min-height: 300px;  */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serve-item:hover {
+  transform: translateY(-10px);
+  /* border: 1px solid #222; */
+}
+
+.serve-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-top: 17px;
+  color: #0f0f00; 
+}
+
+.serve-item p {
+  font-size: 1.3rem;
+  color: #0f0f00;
+  padding-top: 20px;
+  white-space: wrap;
+  line-height: 1.6; 
+}
+
+
+
   /* Why Choose Us Section */
-  .why-choose-us {
+  /* .why-choose-us {
     padding: 60px 20px;
     background-color: #F9F9F9;
     text-align: center;
+    background-image: url('https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?t=st=1741101919~exp=1741105519~hmac=a715a46be620a032b84ce9a0c89fb4cced15cb1dfde0bc06fcace2966c02f440&w=740');
   }
   
   .why-choose-us h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin: 60px 0 20px 0;
     animation: slideIn 1s ease-in-out;
   }
   
   .why-choose-us p {
     font-size: 1.2rem;
+    font-style: oblique;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    white-space: wrap;
+    letter-spacing: 2px;
+    line-height: 2;
     margin-bottom: 40px;
-  }
+  } */
   
+  .why-choose-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 50px 10%;
+    background: linear-gradient(to bottom,#e3f2fd,#f3f5f7 ); /* White to Light Blue */
+    background-image: url('https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?t=st=1741101919~exp=1741105519~hmac=a715a46be620a032b84ce9a0c89fb4cced15cb1dfde0bc06fcace2966c02f440&w=740');
+    background-size: cover;
+    background-position: center;
+    color: #1e3c72; /* Deep Blue for Contrast */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Section Heading */
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1565c0; /* Vibrant Blue */
+}
+
+/* FontAwesome Icon */
+.why-choose-us h2 i {
+    font-size: 1.5rem;
+    color: #ff9800; /* Warm contrast color */
+}
+
+/* Mission Statement */
+.why-choose-us p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
   /* Feedback Section */
   .feedback {
     padding: 60px 20px;
@@ -264,7 +522,7 @@ background-color: white;
   
   .feedback h2 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin: 60px 0 40px 0;
     animation: slideIn 1s ease-in-out;
   }
   
@@ -308,7 +566,7 @@ background-color: white;
   
   .contact h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin: 60px 0 20px 0;
     animation: slideIn 1s ease-in-out;
   }
   
@@ -321,11 +579,17 @@ background-color: white;
   .social-media {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
   }
   
   .social-icon {
     font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #000000;
+    text-align: center;
     color: #007BFF;
     transition: color 0.3s ease, transform 0.3s ease;
   }
@@ -335,18 +599,51 @@ background-color: white;
     transform: scale(1.2);
   }
   
-  /* Footer Section */
-  .footer {
-    background-color: #282C34;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 1rem;
-  }
+
+  /* Footer section styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info, .social-media {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-info h3, .social-media h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f4c10f;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #444; 
+  font-size: 0.9rem;
+  color: #ccc;
+}
   
   /* Animations */
   @keyframes fadeIn {
@@ -376,10 +673,11 @@ background-color: white;
     body{
         font: 10px;
     }
+ 
     .navbar-menu {
       position: fixed;
       top: 0;
-      right: -100%; /* Hide menu off-screen */
+      right: -100%; 
       width: 250px;
       height: 100vh;
       background: #f1f1f1;
@@ -391,7 +689,7 @@ background-color: white;
     }
   
     .navbar-menu.active {
-      right: 0; /* Slide in when active */
+      right: 0; 
     }
   
     .navbar-menu li {
@@ -412,23 +710,73 @@ background-color: white;
       display: block;
     }
     .header {
-      /* background-color: #252424; */
-      background-image: url('https://img.freepik.com/premium-psd/business-stationery-mock-up-design_1307-29.jpg?w=740');
-      background-size: cover;
       margin-top: -90px;
-      background-position: center;
-      color: white;
-      padding: 160px 20px;
-      text-align: center;
     }
-  
-   
+
+    .header-content h1, .contact h2 , 
+    .services h2,.service-item h3,.how-we-serve h2 , .about-content h1,
+      .why-choose-us h2 , .feedback h2,
+      .contact-info h3, .social-media h3{
+      font-size: 1.4rem;
+    }
+    .header-content p {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      word-spacing: 1px;
+    }
+    .about-content h3 {
+      text-align: center; 
+  }
     .service-list, .serve-list, .feedback-list {
       flex-direction: column;
       align-items: center;
     }
   
     .service-item, .serve-item, .feedback-item {
-      width: 100%;
+      /* width: 90%; */
+      font-size: 0.9rem;
+    }
+   
+    .footer {
+      padding: 20px 10px; 
+    }
+  
+    .footer-content {
+      flex-direction: column; 
+      gap: 10px;
+    }
+  
+    .contact-info, .social-media {
+      text-align: center; 
+      font-size: 0.9rem;
+    }
+  
+ 
+  
+    .contact-info p{
+      font-size: 0.9rem; 
+    }
+  
+    .footer-bottom {
+      font-size: 0.8rem; 
     }
   }
+
+
+  #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: #fff;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #f7d309;
+}
