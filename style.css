@@ -52,7 +52,7 @@ body {
   .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
   }
   
   .navbar-menu li a {
@@ -119,7 +119,6 @@ body {
     padding-top: -200px;
     z-index: 1;
     font-weight: 900; 
-  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); */
     animation: fadeIn 2s ease-in-out;
   }
   
@@ -131,7 +130,7 @@ body {
     animation: fadeIn 2.5s ease-in-out;
   }
   .cta-button {
-    background-color: #FFA500;
+    background-color: #ff0000;
     display: inline-block;
     color: white;
     padding: 10px 20px;
@@ -147,162 +146,138 @@ body {
   }
   
 /* About Us Section */
-/* .about-us {
-  padding: 80px 20px;
-  text-align: center; */
-  /* background-image: url('https://img.freepik.com/free-vector/blue-white-gradient-abstract-background_53876-60241.jpg?t=st=1740423791~exp=1740427391~hmac=41b899ab9d1a16f26ab812929b7d671103157d087150c4fa429d2f0d478fcf78&w=740');
-  background-size: cover;
-  background-position: center; */
-/* }
-
-.about-content {
-  margin-top: -50px ;
-  background: transparent;
-}
-
-.about-content h1 {
-  font-size: 2.5rem;
-  color: #333;
-  padding-top: 30px;
-  margin-bottom: 20px;
-}
-
-.about-content h3 {
-  font-size: 1.8rem;
- text-align: left;
-  color: #555; 
-  margin-bottom: 15px;
-}
-
-.about-content p {
-  font-size: 1.1rem;
-  white-space: wrap;
-  color: #111111; 
-  line-height: 1.8;
-  margin-bottom: 20px;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-} */
-
-/* About Us Section */
 .about-us {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Shades of white */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  min-height: 100vh; /* Full screen height */
-  padding: 70px 10%;
-background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient background */
-  color:  #1e3c72; /* White text for contrast */
-  /* padding-bottom: 70px; */
+  padding: 80px 5%;
+  gap: 50px;
 }
 
-/* Content Wrapper */
 .about-content {
-  max-width: 800px;
-  /* text-align: center; */
-  opacity: 0; 
-  transform: translateY(50px);
-  animation: slideUp 1.7s ease-out forwards;
+  flex: 1;
+  max-width: 50%;
+  margin-top: -60px;
+  animation: slideInLeft 1s ease-in-out;
+  text-align: center;
 }
 
-/* Headings */
 .about-content h1 {
   font-size: 2.5rem;
-  margin: 60px 0 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
+  margin: 60px 0 ;
+  color: #333;
+  text-align: left;
 }
 
 .about-content h3 {
-  font-size: 1.8rem;
-  margin-top: 20px;
-  text-align: left;
-  /* color: #ffd700; Golden yellow for emphasis */
-  color: #1565c0; /* Deep blue for emphasis */
-  font-weight: 600;
+  color: #007bff;
 }
 
-/* Paragraphs */
 .about-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #333;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* FontAwesome Icon */
-.about-content h1 i {
-  font-size: 1.5rem;
-  color: #1565c0;
+/* About List Section */
+.about-list {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideInRight 1s ease-in-out;
 }
-@keyframes slideUp {
+
+.about-item {
+  background: linear-gradient(to right, #212529, #343a40); /* Shades of black */
+  color: #fff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  height: 20%; /* Increased height */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Staggered Positioning */
+.about-item:nth-child(1) {
+  margin-left: 0px;
+}
+.about-item:nth-child(2) {
+  margin-left: 20px;
+}
+.about-item:nth-child(3) {
+  margin-left: 40px;
+}
+.about-item:nth-child(4) {
+  margin-left: 60px;
+}
+
+/* Hover Effects */
+.about-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-item h3 {
+  color: #ffc107;
+}
+
+.about-item p {
+  color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-content,
+  .about-list {
+      max-width: 100%;
+      height: 20%;
+  }
+
+  .about-content h3 {
+      text-align: center;
+  }
+
+  /* Reset margin for mobile */
+  .about-item:nth-child(n) {
+      margin-left: 0;
+  }
+}
+
+/* Animations */
+@keyframes slideInLeft {
   from {
       opacity: 0;
-      transform: translateY(50px); /* Starts lower */
+      transform: translateX(-50px);
   }
   to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
   }
 }
 
+@keyframes slideInRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
 
-  /* Services Section */
-  /* .services {
-    margin-top: -90px;
-    padding: 60px 20px;
-    background-image: url('https://img.freepik.com/free-vector/blue-white-gradient-abstract-background_53876-60241.jpg?t=st=1740423791~exp=1740427391~hmac=41b899ab9d1a16f26ab812929b7d671103157d087150c4fa429d2f0d478fcf78&w=740');
-    background-size: cover;
-    color: #f0f0;
-    background-position: center;
-    text-align: center; 
-  }
-  
-  .services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #000;
-    animation: slideIn 1s ease-in-out;
-  }
-  
-  .service-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .service-item {
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    max-height: 80%;
-    text-align: center;
-    color: #000;
-    background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148810354.jpg?t=st=1741108322~exp=1741111922~hmac=8f80b94934e5bc37771fe5ca362659b60bf0aae7b9859eadbe04486decbcaaa7&w=740') ;
-    transition: transform 0.3s ease;
-  }
-
-  .service-item:hover {
-    transform: translateY(-10px);
-    border: 1.2px solid #444;
-  }
-  
-  .service-item h3 {
-    font-size: 1.7rem;
-    padding-top: 10px;
-    font-weight: 900;
-    margin-bottom: 15px;
-  }
-  
-  .service-item p {
-    font-size: 1.5rem;
-    padding: 10px;
-    padding-bottom: 20px;
-   
-  } */
   
 /* Services Section */
 .services {
@@ -327,7 +302,6 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
   flex-direction: column;
   justify-content: center;  /*Center content vertically */
   align-items: center; /*Center content horizontally */
-  /* text-align: center; */
   color: #fff;
   position: sticky;
   top: 0;
@@ -338,11 +312,13 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
 }
 
 /* Unique Background Colors */
-.list-1 { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
-.list-2 { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
-.list-3 { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
-.list-4 { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
-.list-5 { background: linear-gradient(135deg, #fddb92, #d1fdff); }
+.list-1 { background: linear-gradient(135deg, #000000, #434343);}
+.list-2 { background: linear-gradient(135deg, #f0e5e5, #f1dede);color: black;}
+.list-3 { background: linear-gradient(135deg, #474444, #131212); }
+.list-4 { background: linear-gradient(135deg, #ff4e50, #ff9a9e);}
+.list-5 {  background: linear-gradient(135deg, #1a1a1a, #4d4d4d); 
+}
+
 
 /* Text Styling */
 .service-item h3 {
@@ -356,11 +332,6 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
   max-width: 600px;
 }
 
-/* Hover Effects */
-/* .service-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} */
 
 /* Sticky Effect */
 .service-item.sticky {
@@ -377,7 +348,7 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
 
 /* How We Serve Section */
 .how-we-serve {
-  background-color: #ffffffd5;
+  background-color: #ece6e6;
   padding: 60px 20px;
   text-align: center; 
 }
@@ -386,7 +357,7 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
 
 .how-we-serve h2 {
   font-size: 2.5rem;
-  color: #0f0f00;
+  color: #333;
   margin: 60px 0 90px 0;
   animation: slideIn 1s ease-in-out;
 }
@@ -401,31 +372,33 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
 
 .serve-item {
   padding: 20px;
-  background-color: transparent; 
-  color: #0f0f00; 
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0)); 
+ -webkit-backdrop-filter: blur(20px);
+ backdrop-filter: blur(20px);
+ background: transparent;
+  color: #333; 
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
+  border: 1px solig rgba(255,255,255,0.18);
   width: 300px;
-  /* min-height: 300px;  */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .serve-item:hover {
   transform: translateY(-10px);
-  /* border: 1px solid #222; */
 }
 
 .serve-item h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   padding-top: 17px;
-  color: #0f0f00; 
+  /* color: #0f0f00;  */
 }
 
 .serve-item p {
   font-size: 1.3rem;
-  color: #0f0f00;
+  /* color: #0f0f00; */
   padding-top: 20px;
   white-space: wrap;
   line-height: 1.6; 
@@ -434,29 +407,6 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
 
 
   /* Why Choose Us Section */
-  /* .why-choose-us {
-    padding: 60px 20px;
-    background-color: #F9F9F9;
-    text-align: center;
-    background-image: url('https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?t=st=1741101919~exp=1741105519~hmac=a715a46be620a032b84ce9a0c89fb4cced15cb1dfde0bc06fcace2966c02f440&w=740');
-  }
-  
-  .why-choose-us h2 {
-    font-size: 2.5rem;
-    margin: 60px 0 20px 0;
-    animation: slideIn 1s ease-in-out;
-  }
-  
-  .why-choose-us p {
-    font-size: 1.2rem;
-    font-style: oblique;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-    white-space: wrap;
-    letter-spacing: 2px;
-    line-height: 2;
-    margin-bottom: 40px;
-  } */
-  
   .why-choose-us {
     display: flex;
     flex-direction: column;
@@ -489,8 +439,8 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
 /* FontAwesome Icon */
 .why-choose-us h2 i {
     font-size: 1.5rem;
-    color: #ff9800; /* Warm contrast color */
-}
+    color: #ff9800;
+  }
 
 /* Mission Statement */
 .why-choose-us p {
@@ -803,10 +753,10 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
   margin: 0 auto;
   padding: 50px 20px;
   text-align: center;
-  background: #f9fbfd; /* Light background */
-  color: #1e3c72; /* Dark blue for contrast */
+  /* background: #f9fbfd;  */
+  color: #1e3c72;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
 /* Section Title */
@@ -814,7 +764,7 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
   font-size: 2rem;
   margin-bottom: 30px;
   margin: 60px 0 30px 0;
-  color: #1565c0; /* Vibrant Blue */
+  color: #1565c0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -822,11 +772,7 @@ background: linear-gradient(to bottom, #e3f2fd, #ffff);    /*Subtle gradient bac
   color: #808080;
 }
 
-/* .faq-section h2 i {
-  font-size: 1.5rem;
-  color: #808080;
-} */
-
+/* FAQ Section */
 /* FAQ Container */
 .faq-container {
   text-align: left;
